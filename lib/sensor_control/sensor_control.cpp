@@ -1,6 +1,11 @@
 #include "sensor_control.h"
 #include "motor_control.h"
 
+#if not SENSOR 
+uint16_t distance_temp;
+#endif
+
+
 // chiamare nel setup
 void setup_sensor()
 {
@@ -37,12 +42,12 @@ void setup_sensor()
 }
 
 // chiamare nel loop
-void read_distance(uint16_t &distance)
+void read_distance(int &distance)
 {
   #if SENSOR
   distance = sensor_distance.read(false);
   #else
-  sensor_distance.readRangeNoBlocking(distance);
+  if (sensor_distance.readRangeNoBlocking(distance_temp)) distance = distance_temp;
   #endif
 }
 

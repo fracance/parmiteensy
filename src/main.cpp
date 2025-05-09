@@ -14,7 +14,7 @@ VL53L1X sensor_distance;
 VL53L0X sensor_distance;
 #endif
 
-uint16_t distance;
+int distance;
 bool emergency_flag = false;
 float velocita_lineare = 0.0;
 float vel1, vel2;

@@ -18,5 +18,5 @@ extern VL53L0X sensor_distance;
 #endif
 
 void setup_sensor();
-void read_distance(uint16_t &distance);
-void controllo_distanza(uint16_t &distance, float &velocita);
+void read_distance(int &distance);
+void controllo_distanza(int &distance, float &velocita);
