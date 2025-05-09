@@ -84,7 +84,7 @@ void NXP_IO::menu_display()
       display->print("Set Curve Acc");
       break;
     case 4:
-      display->print("Set Ventola");
+      display->print("Set Piedone");
       break;
     default:
       break;
@@ -141,7 +141,7 @@ void NXP_IO::submenu_display()
     break;
   case 1:
     display->setCursor(0, SCREEN_HEIGHT / 2);
-    display->print("Click to Run");
+    display->print("Memiamola");
     break;
   }
   display->display();
